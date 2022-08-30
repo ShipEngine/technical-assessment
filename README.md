@@ -2,13 +2,6 @@
 
 Welcome to the ShipEngine Apps technical assessment project! Completion of this project is required to proceed to the next step.
 
-The project can be completed in either TypeScript or JavaScript. Checkout the branch for your preference before you begin:
-
-```
-git checkout javascript
-git checkout typescript
-```
-
 ## Instructions
 
 The goal of this exercise is to build a basic e-commerce checkout experience. The details of implementation are up to you, and you can use additional libraries as needed – there are no constraints and multiple ways to implement the necessary features.
@@ -36,6 +29,13 @@ A few details to consider:
 - Writing test cases is not required, but is encouraged
 
 ## Starting the assignment
+
+The project can be completed in either TypeScript or JavaScript. Checkout the branch for your preference before you begin:
+
+```
+git checkout javascript
+git checkout typescript
+```
 
 To begin the assignment, ensure you have node 16.x installed (installation options can be found here: https://nodejs.org/en/download/package-manager/), then clone this repository and install the dependencies:
 
