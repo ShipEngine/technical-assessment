@@ -1,17 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Product } from "../types";
 
-interface Cart {
-  addProduct: (product: Product) => void;
-  containsProduct: (product: Product) => boolean;
-  products: Product[];
-}
-
-interface CartProviderProps {
-  children: React.ReactNode;
-}
-
-const saveCart = (products: Product[]) => {
+const saveCart = (products) => {
   localStorage.setItem("products", JSON.stringify(products));
 };
 
@@ -21,20 +10,20 @@ const loadCart = () => {
   return [];
 };
 
-const CartContext = React.createContext<Cart | undefined>(undefined);
+const CartContext = React.createContext(undefined);
 
-export const CartProvider = ({ children }: CartProviderProps) => {
-  const [products, setProducts] = useState<Product[]>(loadCart());
+export const CartProvider = ({ children }) => {
+  const [products, setProducts] = useState(loadCart());
 
   const containsProduct = useCallback(
-    (product: Product) => {
+    (product) => {
       return products.map((p) => p.id).includes(product.id);
     },
     [products]
   );
 
   const addProduct = useCallback(
-    (product: Product) => {
+    (product) => {
       if (!containsProduct(product)) {
         setProducts([...products, product]);
       }
