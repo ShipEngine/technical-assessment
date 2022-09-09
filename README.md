@@ -55,4 +55,4 @@ git format-patch origin/$(git branch --show-current) -o submission
 tar -czvf submission.tar.gz submission
 ```
 
-Email the resulting `submission.tar.gz` file to the hiring mangager you are working with. This file can be found at the root of your project directory after running the above commands.
+Email the resulting `submission.tar.gz` file to [se-hiring@auctane.com](mailto:se-hiring@auctane.com). This file can be found at the root of your project directory after running the above commands.
